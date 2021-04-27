@@ -108,23 +108,23 @@ return the actual color value.  Otherwise return the value unchanged."
        ((string= (symbol-name key) "base16-settings-fringe-bg")
         (if base16-distinct-fringe-background
             (plist-get colors :base01)
-		  (plist-get colors :base00)))
+      (plist-get colors :base00)))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if (eq base16-highlight-mode-line 'box)
-			(list :line-width 1 :color (plist-get colors :base04))
-		  nil))
+     ((string= (symbol-name key) "base16-settings-mode-line-box")
+    (if (eq base16-highlight-mode-line 'box)
+      (list :line-width 1 :color (plist-get colors :base04))
+      nil))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
-		(if (eq base16-highlight-mode-line 'contrast)
-			(plist-get colors :base05)
-		  (plist-get colors :base04)))
+     ((string= (symbol-name key) "base16-settings-mode-line-fg")
+    (if (eq base16-highlight-mode-line 'contrast)
+      (plist-get colors :base05)
+      (plist-get colors :base04)))
 
-	   (t
-		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
-		  (if maybe-color
-			  maybe-color
-			key))))
+     (t
+    (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+      (if maybe-color
+        maybe-color
+      key))))
     key))
 
 
@@ -965,7 +965,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (whitespace-space-after-tab                   :foreground base08 :background base0A)
      (whitespace-space-before-tab                  :foreground base08 :background base09)
      (whitespace-tab                               :foreground base03 :background base01)
-     (whitespace-trailing                          :foreground base0A :background base08)))
+     (whitespace-trailing                          :foreground base0A :background base08)
+
+     ;;; lsp-ui-peek
+     (lsp-ui-peek-peek                                                :background base00)
+     (lsp-ui-peek-selection                                           :background base01)
+     (lsp-ui-peek-highlight                                           :background base03)
+     (lsp-ui-peek-header                                              :background base03)
+     (lsp-ui-peek-list                                                :background base00)))
 
   ;; Anything leftover that doesn't fall neatly into a face goes here.
   (let ((base00 (plist-get theme-colors :base00))
