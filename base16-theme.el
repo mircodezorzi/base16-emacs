@@ -236,7 +236,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-lock-regexp-grouping-construct          :foreground base0E)
      (font-lock-string-face                        :foreground base0B)
      (font-lock-type-face                          :foreground base0A)
-     (font-lock-variable-name-face                 :foreground base08)
+     (font-lock-variable-name-face                 :foreground base05)
      (font-lock-warning-face                       :foreground base08)
 
 ;;;; isearch
