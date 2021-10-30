@@ -1,4 +1,4 @@
-;; base16-gruvbox-material-dark-soft-theme.el -- A base16 colorscheme
+;; base16-gruvbox-material-dark-pale-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-gruvbox-material-dark-soft-colors
+(defvar base16-gruvbox-material-dark-pale-colors
   '(:base00 "#32302f"
     :base01 "#3c3836"
     :base02 "#504945"
@@ -28,17 +28,17 @@
     :base0A "#7daea3"
     :base08 "#d3869b"
     :base0F "#b85651")
-  "All colors for Base16 Gruvbox dark, soft are defined here.")
+  "All colors for Base16 Gruvbox dark, pale are defined here.")
 
 ;; Define the theme
-(deftheme base16-gruvbox-material-dark-soft)
+(deftheme base16-gruvbox-material-dark-pale)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gruvbox-material-dark-soft base16-gruvbox-material-dark-soft-colors)
+(base16-theme-define 'base16-gruvbox-material-dark-pale base16-gruvbox-material-dark-pale-colors)
 
 ;; Mark the theme as provided
-(provide-theme 'base16-gruvbox-material-dark-soft)
+(provide-theme 'base16-gruvbox-material-dark-pale)
 
-(provide 'base16-gruvbox-material-dark-soft-theme)
+(provide 'base16-gruvbox-material-dark-pale-theme)
 
-;;; base16-gruvbox-material-dark-soft-theme.el ends here
+;;; base16-gruvbox-material-dark-pale-theme.el ends here
